@@ -4,7 +4,7 @@
   background-color: $white;
   border-radius: 2px;
   box-shadow: $box-shadow;
-  height: 40vh;
+  height: 100%;
   width: 30%;
 }
 
@@ -27,13 +27,13 @@
 
     h2 {
       color: $text;
-      font-size: 0.8rem;
+      font-size: $small-text;
       font-weight: 400;
       margin-right: 0.5rem;
     }
     p {
       color: $text-light;
-      font-size: 0.8rem;
+      font-size: $small-text;
     }
   }
 }
@@ -48,13 +48,13 @@
 
     h2 {
       color: $text;
-      font-size: 0.8rem;
+      font-size: $small-text;
       font-weight: 400;
       margin-right: 0.5rem;
     }
     p {
       color: $text-light;
-      font-size: 0.8rem;
+      font-size: $small-text;
     }
   }
   .badge-footer-right {
@@ -69,4 +69,15 @@
 .badge-icon {
   cursor: pointer;
   color: $icons-light;
+  transition: 1s;
+
+  &:hover {
+    color: $secondary;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .badge-container {
+    width: 100%;
+  }
 }

@@ -10,7 +10,11 @@ $text: #000000d9;
 $text-light: #00000099;
 $icons-light: #0000004d;
 
+//Other
+//================================================
 $box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+$small-text: clamp(0.8rem, 0.8vw, 0.8vw);
+
 //================================================
 // Mixin
 //================================================
@@ -26,7 +30,7 @@ $box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @mixin header-container {
-  color: $border-dark;
+  color: $text;
   display: flex;
   align-items: center;
   padding: 0.5rem 1rem;
@@ -34,6 +38,6 @@ $box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 @mixin header {
   color: $text;
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 1.5vw, 1.5vw);
   font-weight: 400;
 }

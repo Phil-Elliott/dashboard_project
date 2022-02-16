@@ -4,9 +4,8 @@
   background-color: $white;
   border-radius: 2px;
   box-shadow: $box-shadow;
-  height: 37vh;
+  height: 100%;
   width: 70%;
-  margin-left: 2rem;
 }
 
 .schedule-header {
@@ -19,15 +18,14 @@
   }
   p {
     color: $text-light;
-    font-size: 0.8rem;
+    font-size: $small-text;
   }
 }
 
 .schedule-item {
   border-top: 0.5px solid $border-dark;
-  font-size: 0.8rem;
+  font-size: $small-text;
   display: flex;
-  align-items: center;
 
   justify-content: space-between;
   padding: 0.56rem 1rem;
@@ -38,13 +36,15 @@
     .schedule-item-time {
       font-weight: 600;
       padding-right: 1rem;
+      white-space: nowrap;
     }
     div {
       .shedule-items-details {
         border-left: solid 3px $primary;
+        padding-left: 1rem;
       }
       p {
-        padding-left: 1rem;
+        padding-left: calc(1rem + 3px);
       }
     }
   }
@@ -65,5 +65,29 @@
 
   .schedule-item-pencil {
     margin-right: 1rem;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .schedule {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .schedule-item {
+    flex-direction: column;
+  }
+
+  .schedule-items-icons {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1rem;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .schedule-item {
+    align-items: center;
   }
 }

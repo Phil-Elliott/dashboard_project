@@ -5,24 +5,27 @@
   box-shadow: $box-shadow;
   border-radius: 2px;
   width: 100%;
-  margin-top: 2rem;
+  min-width: 600px;
+  // overflow: auto;
+  // overflow-y: auto;
 }
 
 .fileTable-item-container {
   border-bottom: 0.5px solid $border-dark;
   cursor: pointer;
-  font-size: 0.8rem;
+  font-size: $small-text;
   display: flex;
   align-items: center;
   color: $text;
   padding: 0.5rem 1rem;
-  overflow-wrap: break-word;
 
   p {
     padding-right: 2.85rem;
+    padding-right: 2%;
   }
 
   .fileTable-file-name {
+    overflow-wrap: break-word;
     width: 20%;
   }
   .fileTable-file-type {

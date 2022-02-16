@@ -29,15 +29,15 @@ const badgeDetails = [
   },
 ]
 
-const BadgeOutput = () => {
+const BadgeOutput = ({ changeDisplay }) => {
   return (
     <div className="badge-container">
       <div className="badge-title-container">
         <h1>Badge Output</h1>
-        <FaPencilAlt className="badge-icon" />
+        <FaPencilAlt onClick={changeDisplay} className="badge-icon" />
       </div>
       <div className="badge-info-container">
-        {badgeDetails.map((detail, i) => {
+        {badgeDetails.map((detail) => {
           return (
             <div>
               <h2>{detail.question}</h2>
