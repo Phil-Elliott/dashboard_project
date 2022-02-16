@@ -1,0 +1,39 @@
+// Colors
+//================================================
+$background-color: #eaeaea;
+$white: white;
+$primary: #e66465;
+$secondary: purple;
+$border-light: #dfdfdf;
+$border-dark: #0000001a;
+$text: #000000d9;
+$text-light: #00000099;
+$icons-light: #0000004d;
+
+$box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+//================================================
+// Mixin
+//================================================
+@mixin flex-align {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+@mixin header-container {
+  color: $border-dark;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+@mixin header {
+  color: $text;
+  font-size: 1.25rem;
+  font-weight: 400;
+}

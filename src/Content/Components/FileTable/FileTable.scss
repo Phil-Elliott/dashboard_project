@@ -1,0 +1,87 @@
+@import "./../../../Shared.scss";
+
+.fileTable-container {
+  background-color: white;
+  box-shadow: $box-shadow;
+  border-radius: 2px;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.fileTable-item-container {
+  border-bottom: 0.5px solid $border-dark;
+  cursor: pointer;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  color: $text;
+  padding: 0.5rem 1rem;
+  overflow-wrap: break-word;
+
+  p {
+    padding-right: 2.85rem;
+  }
+
+  .fileTable-file-name {
+    width: 20%;
+  }
+  .fileTable-file-type {
+    width: 10%;
+  }
+  .fileTable-create-date {
+    width: 15%;
+  }
+  .fileTable-published-status {
+    width: 10%;
+  }
+  .fileTable-session-name {
+    width: 20%;
+  }
+  .fileTable-session-code {
+    width: 10%;
+  }
+  .fileTable-session-status {
+    width: 10%;
+  }
+}
+
+.fileTable-header-container {
+  border-bottom: 1.5px solid $secondary;
+  display: flex;
+  align-items: center;
+  color: $secondary;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fileTable-checkbox {
+  width: 5%;
+
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    margin: 0;
+    font: inherit;
+    color: $secondary;
+    font-weight: 600;
+    width: 1rem;
+    height: 1rem;
+    border: 1px solid currentColor;
+    border-radius: 2px;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type="checkbox"]::before {
+    content: "";
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+  input[type="checkbox"]:checked::before {
+    content: "✔";
+    transform: scale(0.8);
+  }
+}
