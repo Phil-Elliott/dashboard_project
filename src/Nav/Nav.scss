@@ -61,7 +61,25 @@
 }
 
 @media only screen and (max-width: 1100px) {
-  .nav-container {
+  .nav-main-top {
+    img,
+    .border,
+    .top-icons {
+      display: none;
+    }
+    .nav-icon {
+      font-size: 1.5rem;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0);
+      }
+    }
+  }
+  .unactive-side-nav {
     display: none;
+  }
+  .active-side-nav {
+    height: 100%;
+    padding-top: 4rem;
   }
 }

@@ -28,10 +28,10 @@ const iconLinks = [
   <FaChartBar />,
 ]
 
-const Nav = () => {
+const Nav = ({ navClass }) => {
   return (
     <div className="nav">
-      <div className="nav-container">
+      <div className={navClass}>
         <div className="nav-main-top">
           <img src="./Logo/logo.svg" alt="Logo" />
           <FaSearch className="top-icons" />
@@ -56,9 +56,19 @@ const Nav = () => {
 export default Nav
 
 /*
+create top header only shows when other dissapears 
+set display none to top part of header 
+have button expand header from left 
+
+
+
+  make top flex and fix at top 
+  make rest go absolute 
+  have that 
+
+
+
   create mixins 
   fix up bottom - (try to use less code)
   should i break up the code a little (maybe not nest everything )
-
-
 */
