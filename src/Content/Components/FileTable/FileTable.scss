@@ -5,60 +5,58 @@
   box-shadow: $box-shadow;
   border-radius: 2px;
   width: 100%;
+  height: 100%;
   min-width: 600px;
-  // overflow: auto;
-  // overflow-y: auto;
 }
 
 .fileTable-item-container {
-  border-bottom: 0.5px solid $border-dark;
+  border-top: 0.5px solid $border-dark;
   cursor: pointer;
   font-size: $small-text;
+  font-size: clamp(0.6rem, 0.8vw, 0.8vw);
   display: flex;
   align-items: center;
   color: $text;
   padding: 0.5rem 1rem;
 
-  p {
-    padding-right: 2.85rem;
-    padding-right: 2%;
+  td {
+    padding-left: 3%;
   }
 
   .fileTable-file-name {
     overflow-wrap: break-word;
-    width: 20%;
+    width: 19%;
   }
   .fileTable-file-type {
-    width: 10%;
+    width: 12%;
   }
   .fileTable-create-date {
-    width: 15%;
+    width: 18%;
   }
   .fileTable-published-status {
-    width: 10%;
+    width: 12.5%;
   }
   .fileTable-session-name {
-    width: 20%;
+    width: 18%;
   }
   .fileTable-session-code {
-    width: 10%;
+    width: 8.5%;
   }
   .fileTable-session-status {
-    width: 10%;
+    width: 8.5%;
   }
 }
 
 .fileTable-header-container {
+  border-top: none;
   border-bottom: 1.5px solid $secondary;
-  display: flex;
-  align-items: center;
   color: $secondary;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .fileTable-checkbox {
-  width: 5%;
+  width: 3.5%;
 
   input[type="checkbox"] {
     -webkit-appearance: none;
@@ -69,7 +67,8 @@
     color: $secondary;
     font-weight: 600;
     width: 1rem;
-    height: 1rem;
+    width: clamp(0.75rem, 1vw, 1vw);
+    height: clamp(0.75rem, 1vw, 1vw);
     border: 1px solid currentColor;
     border-radius: 2px;
     transform: translateY(-0.075em);
@@ -86,5 +85,11 @@
   input[type="checkbox"]:checked::before {
     content: "✔";
     transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .fileTable {
+    overflow-x: scroll;
   }
 }

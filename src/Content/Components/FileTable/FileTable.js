@@ -76,38 +76,40 @@ const FileTable = () => {
   }
 
   return (
-    <div className="fileTable-container ">
-      <div className="fileTable-header-container fileTable-item-container">
-        <div className="fileTable-checkbox">
-          <input
-            onClick={changeChecked}
-            className="fileTable-check"
-            type="checkBox"
-          />
-        </div>
-        <p className="fileTable-file-name">File Name</p>
-        <p className="fileTable-file-type">File Type</p>
-        <p className="fileTable-create-date">File Create Date</p>
-        <p className="fileTable-published-status">Published Status</p>
-        <p className="fileTable-session-name">Session Name</p>
-        <p className="fileTable-session-code">Session Code</p>
-        <p className="fileTable-session-status">Session Status</p>
-      </div>
-      {tableData.map((item, i) => {
-        return (
-          <FileTableItem
-            key={item.fileName}
-            fileName={item.fileName}
-            fileType={item.fileType}
-            fileCreateDate={item.fileCreateDate}
-            publishedStatus={item.publishedStatus}
-            sessionName={item.sessionName}
-            sessionCode={item.sessionCode}
-            sessionStatus={item.sessionStatus}
-            checked={checked}
-          />
-        )
-      })}
+    <div className="fileTable">
+      <table className="fileTable-container ">
+        <tr className="fileTable-header-container fileTable-item-container">
+          <div className="fileTable-checkbox">
+            <input
+              onClick={changeChecked}
+              className="fileTable-check"
+              type="checkBox"
+            />
+          </div>
+          <td className="fileTable-file-name">File Name</td>
+          <td className="fileTable-file-type">File Type</td>
+          <td className="fileTable-create-date">File Create Date</td>
+          <td className="fileTable-published-status">Published Status</td>
+          <td className="fileTable-session-name">Session Name</td>
+          <td className="fileTable-session-code">Session Code</td>
+          <td className="fileTable-session-status">Session Status</td>
+        </tr>
+        {tableData.map((item, i) => {
+          return (
+            <FileTableItem
+              key={item.fileName}
+              fileName={item.fileName}
+              fileType={item.fileType}
+              fileCreateDate={item.fileCreateDate}
+              publishedStatus={item.publishedStatus}
+              sessionName={item.sessionName}
+              sessionCode={item.sessionCode}
+              sessionStatus={item.sessionStatus}
+              checked={checked}
+            />
+          )
+        })}
+      </table>
     </div>
   )
 }

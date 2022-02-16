@@ -21,7 +21,7 @@ const FileTableItem = ({
   }, [checked])
 
   return (
-    <div className="fileTable-item-container" onClick={checkItem}>
+    <tr className="fileTable-item-container" onClick={checkItem}>
       <div className="fileTable-checkbox">
         <input
           className="fileTable-check"
@@ -29,14 +29,14 @@ const FileTableItem = ({
           checked={itemIsChecked && "checked"}
         />
       </div>
-      <p className="fileTable-file-name">{fileName}</p>
-      <p className="fileTable-file-type">{fileType}</p>
-      <p className="fileTable-create-date">{fileCreateDate}</p>
-      <p className="fileTable-published-status">{publishedStatus}</p>
-      <p className="fileTable-session-name">{sessionName}</p>
-      <p className="fileTable-session-code">{sessionCode}</p>
-      <p className="fileTable-session-status">{sessionStatus}</p>
-    </div>
+      <td className="fileTable-file-name">{fileName}</td>
+      <td className="fileTable-file-type">{fileType}</td>
+      <td className="fileTable-create-date">{fileCreateDate}</td>
+      <td className="fileTable-published-status">{publishedStatus}</td>
+      <td className="fileTable-session-name">{sessionName}</td>
+      <td className="fileTable-session-code">{sessionCode}</td>
+      <td className="fileTable-session-status">{sessionStatus}</td>
+    </tr>
   )
 }
 

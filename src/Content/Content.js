@@ -19,7 +19,7 @@ const Content = () => {
           <BadgeOutput changeDisplay={changeDisplay} />
           <Schedule />
         </div>
-        <FileTable />
+        <FileTable className="fileTable" />
         {display && <Modal changeDisplay={changeDisplay} />}
       </div>
     </div>

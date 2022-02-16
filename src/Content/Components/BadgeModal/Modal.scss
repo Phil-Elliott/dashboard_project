@@ -19,7 +19,7 @@
 
   .modal-header {
     @include header-container;
-    font-size: clamp(1rem, 1.15vw, 1.15vw);
+    font-size: clamp(0.8rem, 1.15vw, 1.15vw);
   }
 }
 
@@ -33,13 +33,13 @@
 
     h2 {
       color: $text;
-      font-size: clamp(1rem, 1.25vw, 1.25vw);
+      font-size: clamp(0.8rem, 1.25vw, 1.25vw);
       font-weight: 500;
       margin-right: 1rem;
     }
     p {
       color: $text-light;
-      font-size: clamp(1rem, 1.25vw, 1.25vw);
+      font-size: clamp(0.8rem, 1.25vw, 1.25vw);
     }
   }
 }
@@ -53,7 +53,7 @@
     border-radius: 3px;
     cursor: pointer;
     color: $secondary;
-    font-size: clamp(1rem, 1.25vw, 1.25vw);
+    font-size: clamp(0.8rem, 1.25vw, 1.25vw);
     font-weight: 700;
     padding: 0.25rem 0.5rem;
   }

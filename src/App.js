@@ -13,3 +13,14 @@ function App() {
 }
 
 export default App
+
+/* 
+
+  Create a responsive nav bar 
+    Create top nav 
+    Have hamburger button 
+    Make left menu thats scrollable
+    onClick expand rest of nav
+    change hamburger icon to arrow 
+
+*/
