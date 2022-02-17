@@ -23,13 +23,3 @@ function App() {
 }
 
 export default App
-
-/*
-  ToDo
-    1) ReadMe
-    2) Style Modal box
-    4) Send ZipFile 
-    4) Fix esc key for modal
-
-    change font size of icons for larger screens 
-*/
