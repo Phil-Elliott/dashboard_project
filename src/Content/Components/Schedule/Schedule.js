@@ -1,6 +1,6 @@
 import React from "react"
 import "./Schedule.scss"
-import ScheduleItem from "./ScheduleItem"
+import ScheduleItem from "./Components/ScheduleItem"
 
 const days = [
   "Sunday",

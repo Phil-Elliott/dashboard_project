@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import "./FileTable.scss"
-import FileTableItem from "./FileTableItem"
+import FileTableItem from "./Components/FileTableItem"
 
 const tableData = [
   {
