@@ -2,34 +2,7 @@ import React from "react"
 import "./BadgeOutput.scss"
 import { FaPencilAlt, FaTrash, FaPrint } from "react-icons/fa"
 
-const badgeDetails = [
-  {
-    question: "First Name",
-    answer: "Allison",
-  },
-  {
-    question: "Preferred First Name for Badge",
-    answer: "Al",
-  },
-  {
-    question: "Last Name",
-    answer: "Profit",
-  },
-  {
-    question: "Company",
-    answer: "Bio-IT World",
-  },
-  {
-    question: "Onsite-Badge Holders",
-    answer: "JVA",
-  },
-  {
-    question: "Onsite-Aux",
-    answer: 1,
-  },
-]
-
-const BadgeOutput = ({ changeDisplay }) => {
+const BadgeOutput = ({ changeDisplay, badgeDetails }) => {
   return (
     <div className="badge-container">
       <div className="badge-title-container">

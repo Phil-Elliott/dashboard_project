@@ -22,6 +22,7 @@
 
 .modal-content {
   width: clamp(40%, 35rem, 90%);
+  border-radius: 3px;
   background-color: $white;
   transform: translateY(-200px);
   transition: $transistion-ease;
@@ -51,11 +52,17 @@
       padding-bottom: 0.5rem;
     }
     input {
+      background-color: $background-color;
       font-size: clamp(0.8rem, 1.1vw, 1.1vw);
-      border-color: $secondary;
+      border: none;
       border-radius: 3px;
       padding: 0.25rem 0.5rem;
       width: 100%;
+
+      &:focus {
+        box-shadow: 0 0 10px #719ece;
+        outline: none;
+      }
     }
   }
 }

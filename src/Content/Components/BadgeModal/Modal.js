@@ -1,35 +1,14 @@
 import React, { useEffect } from "react"
 import "./Modal.scss"
-
-const badgeDetails = [
-  {
-    question: "First Name",
-    answer: "Allison",
-  },
-  {
-    question: "Preferred First Name for Badge",
-    answer: "Al",
-  },
-  {
-    question: "Last Name",
-    answer: "Profit",
-  },
-  {
-    question: "Company",
-    answer: "Bio-IT World",
-  },
-  {
-    question: "Onsite-Badge Holders",
-    answer: "JVA",
-  },
-  {
-    question: "Onsite-Aux",
-    answer: 1,
-  },
-]
+import ModalInputItem from "./ModalInputItem"
 
 // closes modal with ESC key
-const Modal = ({ changeDisplay, display }) => {
+const Modal = ({
+  changeDisplay,
+  display,
+  badgeDetails,
+  changeBadgeDetails,
+}) => {
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       changeDisplay()
@@ -52,11 +31,13 @@ const Modal = ({ changeDisplay, display }) => {
         <div className="modal-body">
           {badgeDetails.map((detail, i) => {
             return (
-              <div key={i}>
-                <h2>{detail.question}</h2>
-                {/* <p>{detail.answer}</p> */}
-                <input type="text" placeholder={detail.answer} />
-              </div>
+              <ModalInputItem
+                key={i}
+                id={i}
+                question={detail.question}
+                answer={detail.answer}
+                changeBadgeDetails={changeBadgeDetails}
+              />
             )
           })}
         </div>
