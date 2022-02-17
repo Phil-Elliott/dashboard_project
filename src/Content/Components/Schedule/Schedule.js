@@ -25,11 +25,6 @@ const months = [
   "November",
   "December",
 ]
-const d = new Date()
-let day = days[d.getDay()]
-let dayNumber = d.getDate()
-let month = months[d.getMonth()]
-let year = d.getYear() + 1900
 
 const scheduleData = [
   {
@@ -56,6 +51,12 @@ const scheduleData = [
     details: "Find Sessions",
   },
 ]
+
+const d = new Date()
+let day = days[d.getDay()]
+let dayNumber = d.getDate()
+let month = months[d.getMonth()]
+let year = d.getYear() + 1900
 
 const Schedule = () => {
   return (

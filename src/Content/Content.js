@@ -8,6 +8,7 @@ import Modal from "./Components/BadgeModal/Modal"
 const Content = () => {
   const [display, setDisplay] = useState(false)
 
+  // displays the modal
   const changeDisplay = () => {
     setDisplay(!display)
   }

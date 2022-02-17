@@ -1,3 +1,4 @@
+//================================================
 // Colors
 //================================================
 $background-color: #eaeaea;
@@ -10,24 +11,32 @@ $text: #000000d9;
 $text-light: #00000099;
 $icons-light: #0000004d;
 
+//================================================
 //Other
 //================================================
 $box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 $small-text: clamp(0.8rem, 0.8vw, 0.8vw);
+$logo-filter-color: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg)
+  brightness(102%) contrast(102%);
+$transistion-ease: all 0.5s ease-in-out;
 
 //================================================
-// Mixin
+// Placeholders
 //================================================
-@mixin flex-align {
+%flex-align {
   display: flex;
   align-items: center;
 }
 
-@mixin flex-column {
+%flex-column {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
+
+//================================================
+// Mixin
+//================================================
 
 @mixin header-container {
   color: $text;

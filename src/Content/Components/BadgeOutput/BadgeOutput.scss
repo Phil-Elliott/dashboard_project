@@ -22,7 +22,7 @@
   padding: 0.5rem 1rem;
 
   div {
-    @include flex-align;
+    @extend %flex-align;
     padding-bottom: 0.75rem;
 
     h2 {
@@ -39,12 +39,12 @@
 }
 
 .badge-footer-container {
-  @include flex-align;
+  @extend %flex-align;
   justify-content: space-between;
   padding: 0.75rem 1rem 0.5rem;
 
   .badge-footer-left {
-    @include flex-align;
+    @extend %flex-align;
 
     h2 {
       color: $text;

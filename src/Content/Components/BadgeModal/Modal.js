@@ -28,29 +28,34 @@ const badgeDetails = [
   },
 ]
 
+// closes modal with ESC key
 const Modal = ({ changeDisplay, display }) => {
-  // const closeOnEscapeKeyDown = (e) => {
-  //   if ((e.charCode || e.keyCode) === 27) {
-  //     changeDisplay()
-  //   }
-  // }
+  const closeOnEscapeKeyDown = (e) => {
+    if ((e.charCode || e.keyCode) === 27) {
+      changeDisplay()
+    }
+  }
 
-  // useEffect(() => {
-  //   document.body.addEventListener("keydown", closeOnEscapeKeyDown)
-  // }, [])
+  // Allows ESC key to only be used to close
+  useEffect(() => {
+    if (display === true) {
+      document.body.addEventListener("keydown", closeOnEscapeKeyDown)
+    }
+  }, [display])
 
   return (
     <div className={`modal ${display ? "show" : ""}`} onClick={changeDisplay}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
-          <h1 className="modal-title">Badge Output</h1>
+          <h1 className="modal-title">Edit User</h1>
         </div>
         <div className="modal-body">
           {badgeDetails.map((detail, i) => {
             return (
               <div key={i}>
                 <h2>{detail.question}</h2>
-                <p>{detail.answer}</p>
+                {/* <p>{detail.answer}</p> */}
+                <input type="text" placeholder={detail.answer} />
               </div>
             )
           })}
@@ -58,6 +63,9 @@ const Modal = ({ changeDisplay, display }) => {
         <div className="modal-footer">
           <button onClick={changeDisplay} className="modal-close-btn">
             Close
+          </button>
+          <button onClick={changeDisplay} className="modal-save-btn">
+            Save Changes
           </button>
         </div>
       </div>

@@ -28,6 +28,8 @@ export default App
   ToDo
     1) ReadMe
     2) Style Modal box
-    3) Clean up code
     4) Send ZipFile 
+    4) Fix esc key for modal
+
+    change font size of icons for larger screens 
 */

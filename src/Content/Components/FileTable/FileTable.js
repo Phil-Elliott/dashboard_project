@@ -71,6 +71,7 @@ const tableData = [
 const FileTable = () => {
   const [checked, setChecked] = useState(false)
 
+  // checks or unchecks all checkboxs
   const changeChecked = () => {
     setChecked(!checked)
   }
