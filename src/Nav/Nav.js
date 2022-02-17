@@ -37,11 +37,18 @@ const Nav = ({ navClass }) => {
           <FaSearch className="top-icons" />
           <FaHistory className="top-icons" />
           <span className="border"></span>
-          <div style={{ paddingTop: "1.25rem" }} className="nav-icon">
+          <div
+            style={{ paddingTop: "1.25rem" }}
+            className="nav-icon nav-icon-home"
+          >
             <FaHome />
           </div>
           {iconLinks.map((icon, i) => {
-            return <div className="nav-icon">{icon}</div>
+            return (
+              <div key={i} className="nav-icon">
+                {icon}
+              </div>
+            )
           })}
         </div>
         <div className="nav-bottom">
@@ -54,21 +61,3 @@ const Nav = ({ navClass }) => {
 }
 
 export default Nav
-
-/*
-create top header only shows when other dissapears 
-set display none to top part of header 
-have button expand header from left 
-
-
-
-  make top flex and fix at top 
-  make rest go absolute 
-  have that 
-
-
-
-  create mixins 
-  fix up bottom - (try to use less code)
-  should i break up the code a little (maybe not nest everything )
-*/

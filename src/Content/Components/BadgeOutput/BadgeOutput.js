@@ -37,9 +37,9 @@ const BadgeOutput = ({ changeDisplay }) => {
         <FaPencilAlt onClick={changeDisplay} className="badge-icon" />
       </div>
       <div className="badge-info-container">
-        {badgeDetails.map((detail) => {
+        {badgeDetails.map((detail, i) => {
           return (
-            <div>
+            <div key={i}>
               <h2>{detail.question}</h2>
               <p>{detail.answer}</p>
             </div>

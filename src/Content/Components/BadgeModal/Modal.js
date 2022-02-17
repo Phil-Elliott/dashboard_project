@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect } from "react"
 import "./Modal.scss"
 
 const badgeDetails = [
@@ -28,17 +28,27 @@ const badgeDetails = [
   },
 ]
 
-const Modal = ({ changeDisplay }) => {
+const Modal = ({ changeDisplay, display }) => {
+  // const closeOnEscapeKeyDown = (e) => {
+  //   if ((e.charCode || e.keyCode) === 27) {
+  //     changeDisplay()
+  //   }
+  // }
+
+  // useEffect(() => {
+  //   document.body.addEventListener("keydown", closeOnEscapeKeyDown)
+  // }, [])
+
   return (
-    <div className="modal">
-      <div className="modal-content">
+    <div className={`modal ${display ? "show" : ""}`} onClick={changeDisplay}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
         <div className="modal-header">
           <h1 className="modal-title">Badge Output</h1>
         </div>
         <div className="modal-body">
-          {badgeDetails.map((detail) => {
+          {badgeDetails.map((detail, i) => {
             return (
-              <div>
+              <div key={i}>
                 <h2>{detail.question}</h2>
                 <p>{detail.answer}</p>
               </div>

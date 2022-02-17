@@ -22,13 +22,15 @@ const FileTableItem = ({
 
   return (
     <tr className="fileTable-item-container" onClick={checkItem}>
-      <div className="fileTable-checkbox">
+      <td className="fileTable-checkbox">
         <input
+          aria-label="checkbox"
           className="fileTable-check"
           type="checkBox"
           checked={itemIsChecked && "checked"}
+          onChange={checkItem}
         />
-      </div>
+      </td>
       <td className="fileTable-file-name">{fileName}</td>
       <td className="fileTable-file-type">{fileType}</td>
       <td className="fileTable-create-date">{fileCreateDate}</td>

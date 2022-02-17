@@ -56,9 +56,9 @@
 }
 
 .fileTable-checkbox {
-  width: 3.5%;
-
+  padding: 0 !important;
   input[type="checkbox"] {
+    width: 3.5%;
     -webkit-appearance: none;
     appearance: none;
     cursor: pointer;

@@ -20,7 +20,7 @@ const Content = () => {
           <Schedule />
         </div>
         <FileTable className="fileTable" />
-        {display && <Modal changeDisplay={changeDisplay} />}
+        <Modal changeDisplay={changeDisplay} display={display} />
       </div>
     </div>
   )

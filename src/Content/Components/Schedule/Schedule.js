@@ -67,6 +67,7 @@ const Schedule = () => {
       {scheduleData.map((item, i) => {
         return (
           <ScheduleItem
+            key={i}
             time={item.time}
             details={item.details}
             exactTime={item.exactTime}

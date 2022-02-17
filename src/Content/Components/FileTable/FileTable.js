@@ -78,48 +78,47 @@ const FileTable = () => {
   return (
     <div className="fileTable">
       <table className="fileTable-container ">
-        <tr className="fileTable-header-container fileTable-item-container">
-          <div className="fileTable-checkbox">
-            <input
-              onClick={changeChecked}
-              className="fileTable-check"
-              type="checkBox"
-            />
-          </div>
-          <td className="fileTable-file-name">File Name</td>
-          <td className="fileTable-file-type">File Type</td>
-          <td className="fileTable-create-date">File Create Date</td>
-          <td className="fileTable-published-status">Published Status</td>
-          <td className="fileTable-session-name">Session Name</td>
-          <td className="fileTable-session-code">Session Code</td>
-          <td className="fileTable-session-status">Session Status</td>
-        </tr>
-        {tableData.map((item, i) => {
-          return (
-            <FileTableItem
-              key={item.fileName}
-              fileName={item.fileName}
-              fileType={item.fileType}
-              fileCreateDate={item.fileCreateDate}
-              publishedStatus={item.publishedStatus}
-              sessionName={item.sessionName}
-              sessionCode={item.sessionCode}
-              sessionStatus={item.sessionStatus}
-              checked={checked}
-            />
-          )
-        })}
+        <tbody>
+          <tr
+            className="fileTable-header-container fileTable-item-container"
+            onClick={changeChecked}
+          >
+            <td className="fileTable-checkbox">
+              <input
+                aria-label="checkbox"
+                className="fileTable-check"
+                type="checkBox"
+                checked={checked && "checked"}
+                onChange={changeChecked}
+              />
+            </td>
+            <td className="fileTable-file-name">File Name</td>
+            <td className="fileTable-file-type">File Type</td>
+            <td className="fileTable-create-date">File Create Date</td>
+            <td className="fileTable-published-status">Published Status</td>
+            <td className="fileTable-session-name">Session Name</td>
+            <td className="fileTable-session-code">Session Code</td>
+            <td className="fileTable-session-status">Session Status</td>
+          </tr>
+          {tableData.map((item, i) => {
+            return (
+              <FileTableItem
+                key={item.fileName}
+                fileName={item.fileName}
+                fileType={item.fileType}
+                fileCreateDate={item.fileCreateDate}
+                publishedStatus={item.publishedStatus}
+                sessionName={item.sessionName}
+                sessionCode={item.sessionCode}
+                sessionStatus={item.sessionStatus}
+                checked={checked}
+              />
+            )
+          })}
+        </tbody>
       </table>
     </div>
   )
 }
 
 export default FileTable
-
-/* 
-  put header inside and have clicked if classname is header or whatever 
-  can then click full header 
-
-
-
-*/

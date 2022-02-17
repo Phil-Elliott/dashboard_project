@@ -11,16 +11,30 @@
   align-items: center;
   justify-content: center;
   z-index: 5;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+  pointer-events: none;
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: visible;
 }
 
 .modal-content {
-  width: clamp(40%, 40rem, 80%);
+  width: clamp(40%, 35rem, 90%);
   background-color: white;
+  transform: translateY(-200px);
+  transition: all 0.5s ease-in-out;
 
   .modal-header {
     @include header-container;
-    font-size: clamp(0.8rem, 1.15vw, 1.15vw);
+    font-size: clamp(0.8rem, 1vw, 1vw);
   }
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
 }
 
 .modal-body {
@@ -33,13 +47,13 @@
 
     h2 {
       color: $text;
-      font-size: clamp(0.8rem, 1.25vw, 1.25vw);
+      font-size: clamp(0.8rem, 1.1vw, 1.1vw);
       font-weight: 500;
       margin-right: 1rem;
     }
     p {
       color: $text-light;
-      font-size: clamp(0.8rem, 1.25vw, 1.25vw);
+      font-size: clamp(0.8rem, 1.1vw, 1.1vw);
     }
   }
 }
@@ -53,8 +67,8 @@
     border-radius: 3px;
     cursor: pointer;
     color: $secondary;
-    font-size: clamp(0.8rem, 1.25vw, 1.25vw);
-    font-weight: 700;
+    font-size: clamp(0.8rem, 1.1vw, 1.1vw);
+    font-weight: 600;
     padding: 0.25rem 0.5rem;
   }
 }

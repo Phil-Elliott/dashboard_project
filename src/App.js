@@ -5,7 +5,7 @@ import Nav from "./Nav/Nav"
 import Content from "./Content/Content"
 
 function App() {
-  const [navClass, setNavClass] = useState("nav-container active-side-nav")
+  const [navClass, setNavClass] = useState("nav-container unactive-side-nav")
 
   const changeClass = () => {
     navClass === "nav-container unactive-side-nav"
@@ -24,11 +24,10 @@ function App() {
 
 export default App
 
-/* 
-
-  Create a responsive nav bar 
-    Make left menu thats scrollable
-    onClick expand rest of nav
-    change hamburger icon to arrow 
-
+/*
+  ToDo
+    1) ReadMe
+    2) Style Modal box
+    3) Clean up code
+    4) Send ZipFile 
 */
