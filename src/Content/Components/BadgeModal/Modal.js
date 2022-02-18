@@ -20,12 +20,11 @@ const Modal = ({
   // Allows for enter key to save details
   const saveOnEnterKeyDown = (e) => {
     if (e.code === "Enter" || e.code === "NumpadEnter") {
-      console.log("Enter key was pressed. Run your function.")
-      // event.preventDefault()
       saveChanges()
     }
   }
 
+  // Allows access to use keys only when modal is displayed
   useEffect(() => {
     if (display === true) {
       document.body.addEventListener("keydown", closeOnEscapeKeyDown)

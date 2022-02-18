@@ -37,6 +37,3 @@ const ModalInputItem = ({
 }
 
 export default ModalInputItem
-
-// Have original answer stay if the new answer is blank  (useConditional and dont let it go through until the submit bttn happens)
-// Have other buttons not submit new answer
