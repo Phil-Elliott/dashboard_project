@@ -63,9 +63,8 @@ const Content = () => {
 
   // Changes the answers in the badgeDetailsArr to what is typed in the input
   const changeBadgeDetails = (id, answer) => {
-    if (answer) {
-      badgeDetailsArr[id].answer = answer
-    }
+    badgeDetailsArr[id].answer = answer
+    console.log(badgeDetailsArr[id].answer)
   }
 
   // displays the modal
@@ -75,12 +74,12 @@ const Content = () => {
 
   // Saves the data that was typed - from clicking save btn or pressing enter
   const saveChanges = () => {
-    for (let i = 0; i < badgeDetailsArr.length; i++) {
-      if (badgeDetailsArr[i].answer) {
-        badgeDetails[i].answer = badgeDetailsArr[i].answer
-      }
-    }
-    setDisplay(!display)
+    setBadgeDetails(
+      badgeDetails.map((item, i) => {
+        return badgeDetailsArr[i].answer ? (item = badgeDetailsArr[i]) : item
+      })
+    )
+    changeDisplay()
   }
 
   return (
