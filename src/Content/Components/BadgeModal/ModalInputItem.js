@@ -1,12 +1,25 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 
-const ModalInputItem = ({ question, answer, id, changeBadgeDetails }) => {
+const ModalInputItem = ({
+  question,
+  answer,
+  id,
+  changeBadgeDetails,
+  display,
+}) => {
   const [inputData, setInputData] = useState("")
 
   const change = (e) => {
     setInputData(e)
-    changeBadgeDetails(id, e)
   }
+
+  useEffect(() => {
+    changeBadgeDetails(id, inputData)
+  }, [inputData])
+
+  useEffect(() => {
+    setInputData("")
+  }, [display])
 
   return (
     <div>
@@ -24,3 +37,6 @@ const ModalInputItem = ({ question, answer, id, changeBadgeDetails }) => {
 }
 
 export default ModalInputItem
+
+// Have original answer stay if the new answer is blank  (useConditional and dont let it go through until the submit bttn happens)
+// Have other buttons not submit new answer

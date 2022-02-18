@@ -8,17 +8,28 @@ const Modal = ({
   display,
   badgeDetails,
   changeBadgeDetails,
+  saveChanges,
 }) => {
+  // Allows ESC key to only be used to close
   const closeOnEscapeKeyDown = (e) => {
     if ((e.charCode || e.keyCode) === 27) {
       changeDisplay()
     }
   }
 
-  // Allows ESC key to only be used to close
+  // Allows for enter key to save details
+  const saveOnEnterKeyDown = (e) => {
+    if (e.code === "Enter" || e.code === "NumpadEnter") {
+      console.log("Enter key was pressed. Run your function.")
+      // event.preventDefault()
+      saveChanges()
+    }
+  }
+
   useEffect(() => {
     if (display === true) {
       document.body.addEventListener("keydown", closeOnEscapeKeyDown)
+      document.body.addEventListener("keydown", saveOnEnterKeyDown)
     }
   }, [display])
 
@@ -37,6 +48,7 @@ const Modal = ({
                 question={detail.question}
                 answer={detail.answer}
                 changeBadgeDetails={changeBadgeDetails}
+                display={display}
               />
             )
           })}
@@ -45,7 +57,11 @@ const Modal = ({
           <button onClick={changeDisplay} className="modal-close-btn">
             Close
           </button>
-          <button onClick={changeDisplay} className="modal-save-btn">
+          <button
+            onClick={saveChanges}
+            className="modal-save-btn"
+            type="submit"
+          >
             Save Changes
           </button>
         </div>
